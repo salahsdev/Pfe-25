@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,21 +23,28 @@
             </a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#destinations" class="nav-link">Destinations</a>
+                    <a href="index.php#destinations" class="nav-link">Destinations</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#things-to-do" class="nav-link">Things To Do</a>
+                    <a href="index.php#things-to-do" class="nav-link">Things To Do</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="index.php#about" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="index.php#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
-                        <div class="auth-section">
-                <a href="login.php" class="login-btn" onclick="showSignIn()">Login</a>
-                <a href="singUp.php" class="signup-btn" onclick="showSignUp()">Sign up</a>
+            <div class="auth-section">
+                <?php
+                if (isset($_SESSION['user_id'])) {
+                    echo '<a href="dashboard.php" class="login-btn">Dashboard</a>';
+                    echo '<a href="logout.php" class="signup-btn">Logout</a>';
+                } else {
+                    echo '<a href="login.php" class="login-btn">Login</a>';
+                    echo '<a href="singUp.php" class="signup-btn">Sign up</a>';
+                }
+                ?>
             </div>
         </div>
     </nav>
@@ -42,10 +52,13 @@
     <div class="travel-page-wrapper">
         <header class="travel-page-header">
             <a href="index.php" class="travel-back-button">< BACK</a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <button class="save-city-btn" onclick="saveCity('London, UK', 'london.php')">Save City</button>
+            <?php endif; ?>
         </header>
 
         <div class="travel-main-content">
-            <h1 class="travel-page-title">In the Heart of Rome: A Timeless Dance Between Empire and Everyday Life</h1>
+            <h1 class="travel-page-title">London: Where History Meets Modern Majesty</h1>
             
             <div class="travel-recommendation-badge">
                 <span class="travel-heart-filled">❤</span>
@@ -64,114 +77,118 @@
 
             <section class="travel-about-content">
                 <h2 class="travel-section-heading">About</h2>
-                <p class="travel-text-paragraph">Rome isn't just a city — it's a living museum where every stone has a story.</p>
-                <p class="travel-text-paragraph">You walk past ruins older than memory, and yet the air feels alive.</p>
-                <p class="travel-text-paragraph">Mopeds zip by fountains sculpted for emperors, as laughter echoes off ancient walls.</p>
-                <p class="travel-text-paragraph">Mornings smell like fresh espresso and history; nights hum with warm light and wine.</p>
-                <p class="travel-text-paragraph">In Trastevere, the cobblestones dance beneath your feet.</p>
-                <p class="travel-text-paragraph">At the Pantheon, time pauses — just long enough for you to feel small and infinite.</p>
+                <p class="travel-text-paragraph">London isn't just a city — it's a living tapestry where every street tells a story.</p>
+                <p class="travel-text-paragraph">You walk past red buses and black cabs, while Big Ben chimes the hours away.</p>
+                <p class="travel-text-paragraph">Double-deckers navigate through centuries of history, as laughter echoes off ancient walls.</p>
+                <p class="travel-text-paragraph">Mornings smell like fresh tea and tradition; nights hum with warm pub lights and conversation.</p>
+                <p class="travel-text-paragraph">In Camden, the markets buzz with creative energy beneath your feet.</p>
+                <p class="travel-text-paragraph">At the Tower Bridge, time pauses — just long enough for you to feel small and infinite.</p>
                 <p class="travel-text-paragraph">It's a place that doesn't rush, because it's already seen forever.</p>
                 <p class="travel-text-paragraph">And by the time you leave, part of you will want to stay behind — and belong.</p>
             </section>
-    <div class="quick-facts-container">
-        <div class="quick-facts-header">
-            <h2>Quick Facts</h2>
-            <div class="header-line"></div>
-        </div>
-        
-        <div class="facts-grid">
-            <div class="facts-column">
-                <div class="fact-item">
-                    <div class="fact-icon">
-                        <span>A</span>
-                    </div>
-                    <div class="fact-content">
-                        <h3>Language</h3>
-                        <p>English</p>
-                    </div>
-                </div>
-                
-                <div class="fact-item">
-                    <div class="fact-icon">
-                        <span>£</span>
-                    </div>
-                    <div class="fact-content">
-                        <h3>Currency</h3>
-                        <p>British Pound (GBP)</p>
-                    </div>
-                </div>
-                
-                <div class="fact-item">
-                    <div class="fact-icon">
-                        <i class="fas fa-id-card"></i>
-                    </div>
-                    <div class="fact-content">
-                        <h3>Visa</h3>
-                        <p>EU citizens need passport, others check requirements</p>
-                    </div>
-                </div>
-                
-                <div class="fact-item">
-                    <div class="fact-icon">
-                        <i class="fas fa-plug"></i>
-                    </div>
-                    <div class="fact-content">
-                        <h3>Power Plugs</h3>
-                        <p>Type G</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="facts-column">
-                <div class="fact-item">
-                    <div class="fact-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="fact-content">
-                        <h3>Religion</h3>
-                        <p>Christianity (Anglican)</p>
-                    </div>
-                </div>
-                
-                <div class="fact-item">
-                    <div class="fact-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <div class="fact-content">
-                        <h3>Airport</h3>
-                        <p>Heathrow (LHR)</p>
-                    </div>
-                </div>
-                
-                <div class="fact-item">
-                    <div class="fact-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <div class="fact-content">
-                        <h3>Climate</h3>
-                        <p>Temperate oceanic; mild summers & cool winters. Best time: May-September</p>
-                    </div>
-                </div>
-                
-                <div class="fact-item">
-                    <div class="fact-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <div class="fact-content">
-                        <h3>Apps</h3>
-                        <p>Uber, Citymapper, TfL Go</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="map-container">
-        <h2 class="map-title">London, UK</h2>
-        <div id="london-map" class="city-map"></div>
+            <div class="quick-facts-container">
+                <div class="quick-facts-header">
+                    <h2>Quick Facts</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="facts-grid">
+                    <div class="facts-column">
+                        <div class="fact-item">
+                            <div class="fact-icon">
+                                <span>A</span>
+                            </div>
+                            <div class="fact-content">
+                                <h3>Language</h3>
+                                <p>English</p>
+                            </div>
+                        </div>
+                        
+                        <div class="fact-item">
+                            <div class="fact-icon">
+                                <span>£</span>
+                            </div>
+                            <div class="fact-content">
+                                <h3>Currency</h3>
+                                <p>British Pound (GBP)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="fact-item">
+                            <div class="fact-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="fact-content">
+                                <h3>Visa</h3>
+                                <p>EU citizens need passport, others check requirements</p>
+                            </div>
+                        </div>
+                        
+                        <div class="fact-item">
+                            <div class="fact-icon">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <div class="fact-content">
+                                <h3>Power Plugs</h3>
+                                <p>Type G</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="facts-column">
+                        <div class="fact-item">
+                            <div class="fact-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="fact-content">
+                                <h3>Religion</h3>
+                                <p>Christianity (Anglican)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="fact-item">
+                            <div class="fact-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <div class="fact-content">
+                                <h3>Airport</h3>
+                                <p>Heathrow (LHR)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="fact-item">
+                            <div class="fact-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="fact-content">
+                                <h3>Climate</h3>
+                                <p>Temperate oceanic; mild summers & cool winters. Best time: May-September</p>
+                            </div>
+                        </div>
+                        
+                        <div class="fact-item">
+                            <div class="fact-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="fact-content">
+                                <h3>Apps</h3>
+                                <p>Uber, Citymapper, TfL Go</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <h2 class="map-title">London, UK</h2>
+                <div id="london-map" class="city-map"></div>
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="city-save.js"></script>
     <script>
         // Initialize London map
         const londonMap = L.map('london-map').setView([51.5074, -0.1278], 13);
@@ -188,40 +205,28 @@
             .openPopup();
     </script>
 
-           <footer class="footer">
-            <section id="contact">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-left">
-                        <div class="logo">
-                            <img style="height: 40px;" src="images/SafarVista.png" alt="Safar Vista Logo">
-                        </div>
-                        <p class="copyright">© 2021 All Rights Reserved</p>
-                    </div>
-                    <div class="footer-right">
-                        <div class="footer-text">
-                            <h3>Travel Ideas where with you</h3>
-                            <p>Just A man Exploring A Big Scary World<br>And Sharing It With You</p>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" class="social-link">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        </footer>
+    <style>
+    .save-city-btn {
+        background: #00bcd4;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    .save-city-btn:hover {
+        background: #00acc1;
+    }
+    
+    .save-city-btn:disabled {
+        background: #28a745;
+        cursor: not-allowed;
+    }
+    </style>
 
 </body>
 </html>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +18,7 @@
             </a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#destinations" class="nav-link">Destinationss</a>
+                    <a href="#destinations" class="nav-link">Destinations</a>
                 </li>
                 <li class="nav-item">
                     <a href="#things-to-do" class="nav-link">Things To Do</a>
@@ -29,8 +32,15 @@
             </ul>
 
             <div class="auth-section">
-                <a href="login.php" class="login-btn" onclick="showSignIn()">Login</a>
-                <a href="singUp.php" class="signup-btn" onclick="showSignUp()">Sign up</a>
+                <?php
+                if (isset($_SESSION['user_id'])) {
+                    echo '<a href="dashboard.php" class="login-btn">Dashboard</a>';
+                    echo '<a href="logout.php" class="signup-btn">Logout</a>';
+                } else {
+                    echo '<a href="login.php" class="login-btn">Login</a>';
+                    echo '<a href="singUp.php" class="signup-btn">Sign up</a>';
+                }
+                ?>
             </div>
             
     </nav>
@@ -100,11 +110,11 @@
                 <div class="destination-card">
                     <div class="image-container">
                         <a href="tokyo.php">
-                        <img src="images/tokyo/des-tokyo.jpg" alt="Helsinki Cathedral" class="destination-image">
+                        <img src="images/tokyo/des-tokyo.jpg" alt="Tokyo Skyline" class="destination-image">
                         </a>
                     </div>
                     <div class="card-content">
-                        <h3 class="destination-name">Tokyo, Japane</h3>
+                        <h3 class="destination-name">Tokyo, Japan</h3>
                         <div class="trip-info">
                             <span class="plane-icon">✈</span>
                             <span class="trip-duration">14 Days Trip</span>
@@ -115,7 +125,7 @@
                 <div class="destination-card">
                     <div class="image-container">
                         <a href="cologne.php">
-                        <img src="images/koln/des-koln.jpg" alt="Helsinki Cathedral View" class="destination-image">
+                        <img src="images/koln/des-koln.jpg" alt="Cologne Cathedral" class="destination-image">
                         </a>
                     </div>
                     <div class="card-content">
@@ -238,8 +248,5 @@
         </footer>
 
     </main>
-   
-        
-      
 </body>
 </html>
