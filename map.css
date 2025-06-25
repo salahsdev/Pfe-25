@@ -1,0 +1,51 @@
+.city-map {
+  height: 400px !important;
+  width: 1000px !important;
+  margin: 0 auto !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block !important;
+  position: relative !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.map-container {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 20px auto !important;
+  padding: 20px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.map-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#rome-map {
+  width: 1000px !important;
+  height: 400px !important;
+  margin: 0 auto !important;
+  display: block !important;
+  position: relative !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+#london-map {
+  width: 1000px !important;
+  height: 400px !important;
+  margin: 0 auto !important;
+  display: block !important;
+  position: relative !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}

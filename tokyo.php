@@ -45,7 +45,7 @@
         </header>
 
         <div class="travel-main-content">
-            <h1 class="travel-page-title">In the Heart of Rome: A Timeless Dance Between Empire and Everyday Life</h1>
+            <h1 class="travel-page-title">Tokyo: Where Tomorrow Wears a Kimono of Light</h1>
             
             <div class="travel-recommendation-badge">
                 <span class="travel-heart-filled">❤</span>
@@ -54,26 +54,28 @@
 
             <div class="travel-images-container">
                 <div class="travel-featured-image">
-                    <img src="images/london/london.jpg" alt="London Eye">
+                    <img src="images/tokyo/tokyo.jpg" alt="Tokyo Tower">
                 </div>
                 <div class="travel-thumbnail-images">
-                    <img src="images/london/london 2.jpg" alt="Big Ben">
-                    <img src="images/london/london 3.jpg" alt="Tower Bridge">
+                    <img src="images/tokyo/tokyo 2.jpg" alt="Shibuya Crossing">
+                    <img src="images/tokyo/tokyo 3.jpg" alt="Senso-ji Temple">
                 </div>
             </div>
 
             <section class="travel-about-content">
                 <h2 class="travel-section-heading">About</h2>
-                <p class="travel-text-paragraph">Rome isn't just a city — it's a living museum where every stone has a story.</p>
-                <p class="travel-text-paragraph">You walk past ruins older than memory, and yet the air feels alive.</p>
-                <p class="travel-text-paragraph">Mopeds zip by fountains sculpted for emperors, as laughter echoes off ancient walls.</p>
-                <p class="travel-text-paragraph">Mornings smell like fresh espresso and history; nights hum with warm light and wine.</p>
-                <p class="travel-text-paragraph">In Trastevere, the cobblestones dance beneath your feet.</p>
-                <p class="travel-text-paragraph">At the Pantheon, time pauses — just long enough for you to feel small and infinite.</p>
+                <p class="travel-text-paragraph">Tokyo isn't just a city — it's a paradox in motion, where silence and speed share the same breath.</p>
+                <p class="travel-text-paragraph">You walk past neon lights that flicker like stars, and yet the air feels alive with whispers of the past.</p>
+                <p class="travel-text-paragraph">Mopeds zip by temples that have stood for centuries, as laughter echoes off modern skyscrapers.</p>
+                <p class="travel-text-paragraph">Mornings smell like fresh sushi and history; nights hum with the energy of a thousand dreams.</p>
+                <p class="travel-text-paragraph">In Shibuya, the crosswalks pulse with life, each step a beat in the city's heart.</p>
+                <p class="travel-text-paragraph">At Senso-ji, time pauses — just long enough for you to feel small and infinite.</p>
                 <p class="travel-text-paragraph">It's a place that doesn't rush, because it's already seen forever.</p>
                 <p class="travel-text-paragraph">And by the time you leave, part of you will want to stay behind — and belong.</p>
             </section>
-    <div class="quick-facts-container">
+
+
+     <div class="quick-facts-container">
         <div class="quick-facts-header">
             <h2>Quick Facts</h2>
             <div class="header-line"></div>
@@ -87,17 +89,17 @@
                     </div>
                     <div class="fact-content">
                         <h3>Language</h3>
-                        <p>English</p>
+                        <p>Japanese & English</p>
                     </div>
                 </div>
                 
                 <div class="fact-item">
                     <div class="fact-icon">
-                        <span>£</span>
+                        <span>¥</span>
                     </div>
                     <div class="fact-content">
                         <h3>Currency</h3>
-                        <p>British Pound (GBP)</p>
+                        <p>Japanese Yen (JPY)</p>
                     </div>
                 </div>
                 
@@ -107,7 +109,7 @@
                     </div>
                     <div class="fact-content">
                         <h3>Visa</h3>
-                        <p>EU citizens need passport, others check requirements</p>
+                        <p>Tourist visa required for most countries</p>
                     </div>
                 </div>
                 
@@ -117,7 +119,7 @@
                     </div>
                     <div class="fact-content">
                         <h3>Power Plugs</h3>
-                        <p>Type G</p>
+                        <p>Type A / B</p>
                     </div>
                 </div>
             </div>
@@ -129,7 +131,7 @@
                     </div>
                     <div class="fact-content">
                         <h3>Religion</h3>
-                        <p>Christianity (Anglican)</p>
+                        <p>Shintoism & Buddhism</p>
                     </div>
                 </div>
                 
@@ -139,7 +141,7 @@
                     </div>
                     <div class="fact-content">
                         <h3>Airport</h3>
-                        <p>Heathrow (LHR)</p>
+                        <p>Narita International (NRT)</p>
                     </div>
                 </div>
                 
@@ -149,7 +151,7 @@
                     </div>
                     <div class="fact-content">
                         <h3>Climate</h3>
-                        <p>Temperate oceanic; mild summers & cool winters. Best time: May-September</p>
+                        <p>Humid subtropical; hot summers & mild winters. Best time: March-May, Sept-Nov</p>
                     </div>
                 </div>
                 
@@ -159,32 +161,32 @@
                     </div>
                     <div class="fact-content">
                         <h3>Apps</h3>
-                        <p>Uber, Citymapper, TfL Go</p>
+                        <p>Google Translate, Hyperdia, Tokyo Subway</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="map-container">
-        <h2 class="map-title">London, UK</h2>
-        <div id="london-map" class="city-map"></div>
+     <div class="map-container">
+        <h2 class="map-title">Tokyo, Japan</h2>
+        <div id="tokyo-map" class="city-map"></div>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // Initialize London map
-        const londonMap = L.map('london-map').setView([51.5074, -0.1278], 13);
+        // Initialize Tokyo map
+        const tokyoMap = L.map('tokyo-map').setView([35.6762, 139.6503], 13);
         
         // Add tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
-        }).addTo(londonMap);
+        }).addTo(tokyoMap);
         
-        // Add marker for London
-        L.marker([51.5074, -0.1278])
-            .addTo(londonMap)
-            .bindPopup('<b>London, UK</b><br>The Capital of England')
+        // Add marker for Tokyo
+        L.marker([35.6762, 139.6503])
+            .addTo(tokyoMap)
+            .bindPopup('<b>Tokyo, Japan</b><br>The Capital of Japan')
             .openPopup();
     </script>
 

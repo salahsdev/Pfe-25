@@ -114,7 +114,7 @@
                 
                 <div class="destination-card">
                     <div class="image-container">
-                        <a href="europe.phpl">
+                        <a href="cologne.php">
                         <img src="images/koln/des-koln.jpg" alt="Helsinki Cathedral View" class="destination-image">
                         </a>
                     </div>
@@ -136,7 +136,7 @@
             <div class="content-grid">
                 <!-- Main Featured Article -->
                 <div class="main-article">
-                    <a href="#" class="article-link">
+                    <a href="articel-1.php" class="article-link">
                         <img src="images/home/couples.png" alt="Couple dining in Rome restaurant" class="main-image">
                         <div class="main-content">
                             <span class="category food-drinks">Food & Drinks</span>
@@ -195,7 +195,7 @@
                     <div class="about-text">
                         <h2>Nice To Meet You</h2>
                         <p>I am Salah, a traveler sharing my journey with the world. Through every city, story, and soul I meet, I find meaning worth sharing.</p>
-                        <p>This site is my journal—full of tips, tales, and raw wanderlust. I hope it inspires you to step out, explore, and feel more alive. Let's chase horizons together—one path, one dream at a time.</p>
+                        <p>This site is my journal full of tips, tales, and raw wanderlust. I hope it inspires you to step out, explore, and feel more alive. Let's chase horizons together one path, one dream at a time.</p>
                     </div>
                 </div>
             </div>

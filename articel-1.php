@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>safarvista</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="articel.css">
 </head>
 <body>
@@ -27,14 +28,19 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
+                 <div class="auth-section">
+                <a href="login.php" class="login-btn" onclick="showSignIn()">Login</a>
+                <a href="singUp.php" class="signup-btn" onclick="showSignUp()">Sign up</a>
+            </div>
     </nav>
 
 
         <div class="container">
         <!-- Back button -->
-        <div class="back-button">
-            <span>< BACK</span>
-        </div>
+           <div class="travel-page-wrapper">
+        <header class="travel-page-header">
+            <a href="index.php" class="travel-back-button">< BACK</a>
+        </header>
 
         <!-- Header -->
         <header>
@@ -61,7 +67,7 @@
                     <img src="images/articels/rome-articel/colisee_rome.jpg" alt="Colosseum exterior view">
                 </div>
                 <div class="place-content">
-                    <h3>1. Places to visit: <span class="highlight">Colosseum</span></h3>
+                    <h3>1. Places to visit: Colosseum</h3>
                     <p>The number 1 attraction of Rome is the Colosseum; the large amphitheatre that housed 65,000 spectators in Roman days. Gladiators battled each other as well wild animals in the Colosseum's arena, which is considered one of the seven modern wonders of the world. In the giant 'ruins' of the Colosseum, you can visit the stands, the arena and the underground areas of this largest Roman amphitheatre.</p>
                 </div>
             </div>
@@ -72,7 +78,7 @@
                     <img src="images/articels/rome-articel/fontana_di_trevi_rome.jpg" alt="Trevi Fountain with baroque architecture">
                 </div>
                 <div class="place-content">
-                    <h3>2. <span class="highlight">Trevi Fountain of Rome</span></h3>
+                    <h3>2.Trevi Fountain of Rome</h3>
                     <p>The most famous fountain in the capital of Italy and perhaps even the world must be the 'Fontana di Trevi', or Trevi Fountain. This baroque fountain, located on the Piazza di Trevi, was built in the 18th century and a must see of the list of <strong>best things to do in Rome</strong>. The landmark and monument displays the god of the sea Neptune on his chariot.</p>
                 </div>
             </div>

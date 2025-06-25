@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>safarvista</title>
-    <link rel="stylesheet" href=style.css>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="quickfacts.css">
+    
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -28,12 +32,16 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
+                        <div class="auth-section">
+                <a href="login.php" class="login-btn" onclick="showSignIn()">Login</a>
+                <a href="singUp.php" class="signup-btn" onclick="showSignUp()">Sign up</a>
+            </div>
         </div>
     </nav>
 
     <div class="travel-page-wrapper">
         <header class="travel-page-header">
-            <a href="index.html" class="travel-back-button">< BACK</a>
+            <a href="index.php" class="travel-back-button">< BACK</a>
         </header>
 
         <div class="travel-main-content">
@@ -61,17 +69,160 @@
                 <p class="travel-text-paragraph">Mopeds zip by fountains sculpted for emperors, as laughter echoes off ancient walls.</p>
                 <p class="travel-text-paragraph">Mornings smell like fresh espresso and history; nights hum with warm light and wine.</p>
                 <p class="travel-text-paragraph">In Trastevere, the cobblestones dance beneath your feet.</p>
-                <p class="travel-text-paragraph">At the Pantheon, time pauses — just long enough for you to feel small and infinite.</p>
+                <p class="travel-text-paragraph">Perfume was born here, but so was resistance. So was laughter echoing down narrow lanes of Altstadt, where every crooked window has seen both war and weddings.</p>
                 <p class="travel-text-paragraph">It's a place that doesn't rush, because it's already seen forever.</p>
-                <p class="travel-text-paragraph">And by the time you leave, part of you will want to stay behind — and belong.</p>
+                <p class="travel-text-paragraph">And by the time you leave, part of you will want to stay behind and belong.</p>
             </section>
-            <section class="travel-details-content">
-                <h2 class="travel-section-heading">Details</h2>
-                <p class="travel-detail-text">The scent of worn leather and roasted chestnuts drifts through narrow alleys.</p>
-                <p class="travel-detail-text">A Vespa hums past a crumbling wall, ivy curling like ancient script.</p>
-                <p class="travel-detail-text">Somewhere, a church bell chimes — soft, distant, like a heartbeat.</p>
-            </section>
+            
+     <div class="quick-facts-container">
+        <div class="quick-facts-header">
+            <h2>Quick Facts</h2>
+            <div class="header-line"></div>
+        </div>
+        
+        <div class="facts-grid">
+            <div class="facts-column">
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <span>A</span>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Language</h3>
+                        <p>Italian & English</p>
+                    </div>
+                </div>
+                
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <span>€</span>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Currency</h3>
+                        <p>Euro (EUR)</p>
+                    </div>
+                </div>
+                
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Visa</h3>
+                        <p>EU citizens free access, others check requirements</p>
+                    </div>
+                </div>
+                
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Power Plugs</h3>
+                        <p>Type C / F / L</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="facts-column">
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Religion</h3>
+                        <p>Roman Catholicism</p>
+                    </div>
+                </div>
+                
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Airport</h3>
+                        <p>Leonardo da Vinci (FCO)</p>
+                    </div>
+                </div>
+                
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Climate</h3>
+                        <p>Mediterranean; hot summers & mild winters. Best time: April-June, Sept-Oct</p>
+                    </div>
+                </div>
+                
+                <div class="fact-item">
+                    <div class="fact-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Apps</h3>
+                        <p>Uber, Citymapper, Roma Mobilità</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+     <div class="map-container">
+        <h2 class="map-title">Rome, Italy</h2>
+        <div id="rome-map" class="city-map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize Rome map
+        const romeMap = L.map('rome-map').setView([41.9028, 12.4964], 13);
+        
+        // Add tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(romeMap);
+        
+        // Add marker for Rome
+        L.marker([41.9028, 12.4964])
+            .addTo(romeMap)
+            .bindPopup('<b>Rome, Italy</b><br>The Eternal City')
+            .openPopup();
+    </script>
+
+           <footer class="footer">
+            <section id="contact">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <div class="logo">
+                            <img style="height: 40px;" src="images/SafarVista.png" alt="Safar Vista Logo">
+                        </div>
+                        <p class="copyright">© 2021 All Rights Reserved</p>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-text">
+                            <h3>Travel Ideas where with you</h3>
+                            <p>Just A man Exploring A Big Scary World<br>And Sharing It With You</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </footer>
+
 </body>
 </html>
