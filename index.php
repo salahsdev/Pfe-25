@@ -15,7 +15,7 @@
             </a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#destinations" class="nav-link">Destinations</a>
+                    <a href="#destinations" class="nav-link">Destinationss</a>
                 </li>
                 <li class="nav-item">
                     <a href="#things-to-do" class="nav-link">Things To Do</a>
