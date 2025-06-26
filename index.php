@@ -171,11 +171,11 @@ session_start();
     
                     <!-- Hotels Article -->
                     <div class="side-article">
-                        <a href="#" class="article-link">
+                        <a href="articel-3.php" class="article-link">
                             <img src="images/home/hotels.jpeg" alt="Modern hotel building" class="side-image">
                             <div class="side-content">
                                 <span class="category hotels">Hotels</span>
-                                <h3 class="side-headline">15 South London Markets You'll Love: Best Markets in South London</h3>
+                                <h3 class="side-headline">Check In to Culture: Tokyo’s Top 5 Unique Hotels</h3>
                             </div>
                         </a>
                     </div>
