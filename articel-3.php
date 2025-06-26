@@ -134,3 +134,48 @@
                 </div>
             </div>
 
+<div class="map-container">
+    <h2 class="map-title">Tokyo, Japan</h2>
+    <div id="tokyo-map" class="city-map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // Initialize Tokyo map
+    const tokyoMap = L.map('tokyo-map').setView([35.6762, 139.6503], 12);
+    
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(tokyoMap);
+    
+    // Add marker for Hoshinoya Tokyo
+    L.marker([35.6895, 139.7670])
+        .addTo(tokyoMap)
+        .bindPopup('<b>Hoshinoya Tokyo</b><br>Luxury ryokan-style hotel in Otemachi district');
+    
+    // Add marker for Shibuya Granbell Hotel
+    L.marker([35.6581, 139.7014])
+        .addTo(tokyoMap)
+        .bindPopup('<b>Shibuya Granbell Hotel</b><br>Boutique hotel in the heart of Shibuya');
+    
+    // Add marker for Andon Ryokan
+    L.marker([35.7219, 139.7966])
+        .addTo(tokyoMap)
+        .bindPopup('<b>Andon Ryokan</b><br>Traditional Japanese inn in Minowa, Taito');
+    
+    // Add marker for Park Hotel Tokyo
+    L.marker([35.6654, 139.7707])
+        .addTo(tokyoMap)
+        .bindPopup('<b>Park Hotel Tokyo</b><br>Modern hotel in Shimbashi with Tokyo Bay views');
+    
+    // Add marker for Hotel Ryumeikan Tokyo
+    L.marker([35.6809, 139.7677])
+        .addTo(tokyoMap)
+        .bindPopup('<b>Hotel Ryumeikan Tokyo</b><br>Traditional Japanese hospitality near Tokyo Station');
+</script>
+
+        </section>
+    </div>
+</body>
+</html>
