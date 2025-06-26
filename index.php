@@ -149,9 +149,8 @@ session_start();
                     <a href="articel-1.php" class="article-link">
                         <img src="images/home/couples.png" alt="Couple dining in Rome restaurant" class="main-image">
                         <div class="main-content">
-                            <span class="category food-drinks">Food & Drinks</span>
-                            <h2 class="main-headline">Rome food & drinks guide : 10 things to try in Rome, Italy</h2>
-                            <p class="date">Aug 21, 2025</p>
+                            <span class="category food-drinks">Hidden Gems</span>
+                            <h2 class="main-headline">The Ultimate Rome Travel Guide: Must-See Places and Hidden Gems</h2>
                             <p class="excerpt">It seems that in Rome, almost any problem can be solved with a combination of pizza and spaghetti : after all, food, health, and...</p>
                         </div>
                     </a>
@@ -161,11 +160,11 @@ session_start();
                 <div class="side-articles">
                     <!-- Shopping Article -->
                     <div class="side-article">
-                        <a href="#" class="article-link">
+                        <a href="articel-2.php" class="article-link">
                             <img src="images/home/shope.jpeg" alt="Shopping market interior" class="side-image">
                             <div class="side-content">
                                 <span class="category shopping">Shopping</span>
-                                <h3 class="side-headline">15 South London Markets You'll Love: Best Markets in South London</h3>
+                                <h3 class="side-headline">5 South London Markets You'll Love: Best Markets in South London</h3>
                             </div>
                         </a>
                     </div>

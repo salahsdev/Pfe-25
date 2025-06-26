@@ -87,11 +87,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             <div class="switch-form">
                 <p>New to our community</p>
-                <a href="signup.php" class="switch-btn">Create an account</a>
+                <a href="singUp.php" class="switch-btn">Create an account</a>
             </div>
         </div>
     </div>
 
-    <script src="login.js"></script>
 </body>
 </html>

@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
             
             <div class="switch-form">
-                <a href="login.html" class="switch-btn">Already have an account? Sign In</a>
+                <a href="login.php" class="switch-btn">Already have an account? Sign In</a>
             </div>
         </div>
     </div>

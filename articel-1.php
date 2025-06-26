@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>safarvista</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="map.css">
     <link rel="stylesheet" href="articel.css">
 </head>
 <body>
@@ -44,7 +46,7 @@
 
         <!-- Header -->
         <header>
-            <h1>Rome food & drinks guide : 8 things to try in Rome, Italy</h1>
+            <h1>The Ultimate Rome Travel Guide: Must-See Places and Hidden Gems</h1>
         </header>
 
         <!-- Hero image -->
@@ -114,38 +116,49 @@
                 </div>
             </div>
 
-        <h2>Food You Should Try And Enjoy</h2>
+            <div class="map-container">
+    <h2 class="map-title">Rome, Italy</h2>
+    <div id="rome-map" class="city-map"></div>
+</div>
 
-            <!-- Trevi Fountain -->
-            <div class="place-item">
-                <div class="place-image">
-                    <img src="images/articels/rome-articel/pasta all.png" alt="Trevi Fountain with baroque architecture">
-                </div>
-                <div class="place-content">
-                    <h3>1.Pasta alla Carbonara</h3>
-                    <p>The undisputed king of Roman cuisine, carbonara is more than a dish—it's a ritual. Beloved by locals with near-religious fervor, this simple yet bold classic is a far cry from French culinary pomp. Crisped guanciale releases its rich fat, while egg yolks, pecorino, and black pepper are whisked into a creamy, peppery sauce. No cream. No nonsense. Just pure Roman soul on a plate.</p>
-                </div>
-            </div>
-            <!-- Trevi Fountain -->
-            <div class="place-item">
-                <div class="place-image">
-                    <img src="images/articels/rome-articel/bucatini.png" alt="Trevi Fountain with baroque architecture">
-                </div>
-                <div class="place-content">
-                    <h3>2.Bucatini all’Amatriciana and Pasta alla Gricia</h3>
-                    <p>The third crown jewel of Roman pasta, bucatini all’Amatriciana is a fiery ode to tomato lovers. Built on slow-cooked tomatoes, crisp guanciale, a splash of white wine, a pinch of chili, and shavings of pecorino, it’s rustic brilliance in a bowl—cucina povera with soul. Born in the hills of Lazio, shepherds first made it in bianco, before tomatoes ever touched Italian soil. Pecorino from their sheep, cured pork that traveled well—this dish carries centuries in each bite.</p>
-                </div>
-            </div>
-            <!-- Trevi Fountain -->
-            <div class="place-item">
-                <div class="place-image">
-                    <img src="images/articels/rome-articel/cicoria.png" alt="Trevi Fountain with baroque architecture">
-                </div>
-                <div class="place-content">
-                    <h3>3.Cicoria Ripassata</h3>
-                    <p>Romans may love their pasta, but greens are never far from the table. The favorite? Cicoria ripassata—wild dandelion greens sautéed with garlic, chili, and plenty of olive oil. Bitter, bold, and packed with flavor, it’s a rustic classic still loved by Italian families on both sides of the Atlantic.</p>
-                </div>
-            </div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // Initialize Rome map
+    const romeMap = L.map('rome-map').setView([41.9028, 12.4964], 13);
+    
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(romeMap);
+    
+    // Add marker for Colosseum
+    L.marker([41.8902, 12.4922])
+        .addTo(romeMap)
+        .bindPopup('<b>Colosseum</b><br>Ancient amphitheatre and one of the seven modern wonders');
+    
+    // Add marker for Trevi Fountain
+    L.marker([41.9009, 12.4833])
+        .addTo(romeMap)
+        .bindPopup('<b>Trevi Fountain</b><br>Famous baroque fountain with Neptune statue');
+    
+    // Add marker for Pantheon
+    L.marker([41.8986, 12.4769])
+        .addTo(romeMap)
+        .bindPopup('<b>Pantheon</b><br>Best preserved Roman building with remarkable dome');
+    
+    // Add marker for St. Peter's Basilica
+    L.marker([41.9022, 12.4539])
+        .addTo(romeMap)
+        .bindPopup('<b>St. Peter\'s Basilica</b><br>Heart of Vatican City and Catholic Church');
+    
+    // Add marker for Basilica di San Clemente al Laterano
+    L.marker([41.8874, 12.4972])
+        .addTo(romeMap)
+        .bindPopup('<b>Basilica di San Clemente al Laterano</b><br>Multi-layered church with ancient excavations');
+</script>
+
+
+
         </section>
     </div>
 </body>
