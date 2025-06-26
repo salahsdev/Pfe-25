@@ -36,6 +36,7 @@ session_start();
                 </li>
             </ul>
             <div class="auth-section">
+
                 <?php
                 if (isset($_SESSION['user_id'])) {
                     echo '<a href="dashboard.php" class="login-btn">Dashboard</a>';
@@ -45,6 +46,7 @@ session_start();
                     echo '<a href="singUp.php" class="signup-btn">Sign up</a>';
                 }
                 ?>
+
             </div>
         </div>
     </nav>
@@ -52,6 +54,8 @@ session_start();
     <div class="travel-page-wrapper">
         <header class="travel-page-header">
             <a href="index.php" class="travel-back-button">< BACK</a>
+
+            <!--Save Button (only if user is logged in)-->
             <?php if (isset($_SESSION['user_id'])): ?>
                 <button class="save-city-btn" onclick="saveCity('London, UK', 'london.php')">Save City</button>
             <?php endif; ?>

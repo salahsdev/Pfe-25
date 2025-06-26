@@ -1,4 +1,4 @@
--- Create table for saved cities
+--  table for saved cities
 CREATE TABLE IF NOT EXISTS saved_cities (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
