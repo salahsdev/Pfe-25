@@ -73,7 +73,7 @@ session_start();
                 <img src="images/partners/alitalia.svg" alt="Alitalia" class="partner-logo small-logo">
             </div>
         </section>
-        <!-- Destinations (dynamic, keep design) -->
+
         <section id="destinations" class="destinations">
             <div class="container">
                 <h1 class="title">Destinations</h1>
@@ -141,10 +141,11 @@ session_start();
         </section>
         <section id="things-to-do">
         <div class="container">
-            <h1 class="main-title">Things To Do</h1>
+            <h1 class="main-title">Top Five</h1>
             
             <div class="content-grid">
-                <!-- Main Featured Article -->
+
+
                 <div class="main-article">
                     <a href="articel-1.php" class="article-link">
                         <img src="images/home/couples.png" alt="Couple dining in Rome restaurant" class="main-image">
@@ -156,9 +157,8 @@ session_start();
                     </a>
                 </div>
     
-                <!-- Side Articles -->
                 <div class="side-articles">
-                    <!-- Shopping Article -->
+       
                     <div class="side-article">
                         <a href="articel-2.php" class="article-link">
                             <img src="images/home/shope.jpeg" alt="Shopping market interior" class="side-image">
@@ -169,7 +169,7 @@ session_start();
                         </a>
                     </div>
     
-                    <!-- Hotels Article -->
+                    
                     <div class="side-article">
                         <a href="articel-3.php" class="article-link">
                             <img src="images/home/hotels.jpeg" alt="Modern hotel building" class="side-image">
@@ -180,13 +180,13 @@ session_start();
                         </a>
                     </div>
     
-                    <!-- Travel Budget Article -->
+                   
                     <div class="side-article">
-                        <a href="#" class="article-link">
+                        <a href="articel-4.php" class="article-link">
                             <img src="images/home/edc.jpeg" alt="Travel items including camera and passport" class="side-image">
                             <div class="side-content">
-                                <span class="category travel-budget">Travel Budget</span>
-                                <h3 class="side-headline">15 South London Markets You'll Love: Best Markets in South London</h3>
+                                <span class="category travel-budget">Hidden Gems</span>
+                                <h3 class="side-headline">5 Ways Cologne Tells Its Story: A City of Faith, Art, and the Rhine</h3>
                             </div>
                         </a>
                     </div>
