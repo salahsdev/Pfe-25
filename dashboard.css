@@ -125,7 +125,6 @@
   background: #c82333;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .dashboard-container {
     padding: 20px 15px;

@@ -10,7 +10,8 @@ function saveCity(cityName, cityPage) {
     .then((data) => {
       if (data.success) {
         alert("City saved to your dashboard!")
-        // Update button text
+
+        // uupdate button text
         const button = event.target
         button.textContent = "Saved!"
         button.disabled = true

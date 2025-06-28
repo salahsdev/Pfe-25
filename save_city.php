@@ -7,7 +7,7 @@ include 'config.php';
 
 header('Content-Type: application/json');
 
-// Check if user is logged in
+// check if user is logged in
 if (!isset($_SESSION['user_id'])) {
     echo json_encode(['success' => false, 'message' => 'User not logged in']);
     exit();
@@ -26,7 +26,7 @@ if ($action === 'save') {
     }
     
     try {
-        // Check if city is already saved
+        // check if city is already saved
         $check_stmt = $conn->prepare("SELECT id FROM saved_cities WHERE user_id = ? AND city_name = ?");
         if (!$check_stmt) {
             echo json_encode(['success' => false, 'message' => 'Database prepare error: ' . $conn->error]);

@@ -1,13 +1,11 @@
 <?php
 $servername = "localhost";
-$username = "root";      // Default for XAMPP
-$password = "";          // Usually empty in XAMPP
-$dbname = "safarivista";  // Your database name
+$username = "root";     
+$password = "";         
+$dbname = "safarivista";  
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }

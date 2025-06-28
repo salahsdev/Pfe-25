@@ -129,35 +129,35 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    // Initialize Cologne map
+    //  Cologne map
     const cologneMap = L.map('cologne-map').setView([50.9375, 6.9603], 12);
     
-    // Add tile layer
+    //  tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(cologneMap);
     
-    // Add marker for Kölner Dom (Cologne Cathedral)
+    //  marker for Kölner Dom (Cologne Cathedral)
     L.marker([50.9413, 6.9583])
         .addTo(cologneMap)
         .bindPopup('<b>Kölner Dom (Cologne Cathedral)</b><br>Gothic masterpiece and UNESCO World Heritage Site');
     
-    // Add marker for Hohenzollern Bridge
+    //  marker for Hohenzollern Bridge
     L.marker([50.9417, 6.9661])
         .addTo(cologneMap)
         .bindPopup('<b>Hohenzollern Bridge</b><br>Famous bridge with love locks and cathedral views');
     
-    // Add marker for Museum Ludwig
+    //  marker for Museum Ludwig
     L.marker([50.9406, 6.9599])
         .addTo(cologneMap)
         .bindPopup('<b>Museum Ludwig</b><br>Modern and contemporary art museum');
     
-    // Add marker for Cologne Old Town (Altstadt)
+    //  marker for Cologne Old Town (Altstadt)
     L.marker([50.9375, 6.9603])
         .addTo(cologneMap)
         .bindPopup('<b>Cologne Old Town (Altstadt)</b><br>Historic cobblestone streets and traditional brewhouses');
     
-    // Add marker for Rheinauhafen & Kranhäuser
+    //  marker for Rheinauhafen & Kranhäuser
     L.marker([50.9264, 6.9683])
         .addTo(cologneMap)
         .bindPopup('<b>Rheinauhafen & Kranhäuser</b><br>Modern architectural district with crane-shaped buildings');

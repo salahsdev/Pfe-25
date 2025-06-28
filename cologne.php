@@ -190,15 +190,15 @@ session_start();
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="city-save.js"></script>
     <script>
-        // Initialize Cologne map
+        //  Cologne map
         const cologneMap = L.map('cologne-map').setView([50.9375, 6.9603], 13);
         
-        // Add tile layer
+        //  tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
         }).addTo(cologneMap);
         
-        // Add marker for Cologne
+        //  marker for Cologne
         L.marker([50.9375, 6.9603])
             .addTo(cologneMap)
             .bindPopup('<b>Cologne, Germany</b><br>Cathedral City on the Rhine')

@@ -13,10 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST['email']);
     $password = $_POST['password'];
 
-    // Server-side validation
+    // server side validation
     if (!empty($first) && !empty($last) && !empty($email) && !empty($password)) {
 
-        // Check if email already exists
+        // check if email already exists
         $check = $conn->prepare("SELECT id FROM useer WHERE email = ?");
         $check->bind_param("s", $email);
         $check->execute();
@@ -25,15 +25,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($check->num_rows > 0) {
             echo "Email already registered. Try logging in.";
         } else {
-            // Hash the password
+
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-            // Insert new user
             $stmt = $conn->prepare("INSERT INTO useer (first_name, last_name, email, password) VALUES (?, ?, ?, ?)");
             $stmt->bind_param("ssss", $first, $last, $email, $hashed_password);
 
             if ($stmt->execute()) {
-                // Redirect to login page after successful signup
+
                 header("Location: login.php");
                 exit();
             } else {
@@ -58,7 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="loginstyle.css">
 </head>
 <body>
-    <!-- Sign Up Form -->
     <div class="container" id="signup-container">
         <div class="form-container">
             <h2>Sign Up</h2>

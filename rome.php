@@ -189,12 +189,12 @@
         // Initialize Rome map
         const romeMap = L.map('rome-map').setView([41.9028, 12.4964], 13);
         
-        // Add tile layer
+        //  tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
         }).addTo(romeMap);
         
-        // Add marker for Rome
+        //  marker for Rome
         L.marker([41.9028, 12.4964])
             .addTo(romeMap)
             .bindPopup('<b>Rome, Italy</b><br>The Eternal City')

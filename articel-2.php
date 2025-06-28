@@ -38,33 +38,27 @@
 
             <div class="container">
 
-        <!-- Back button -->
            <div class="travel-page-wrapper">
         <header class="travel-page-header">
             <a href="index.php" class="travel-back-button">< BACK</a>
         </header>
 
-        <!-- Header -->
         <header>
             <h1>5 South London Markets You'll Love: Best Markets in South London</h1>
         </header>
 
-        <!-- Hero image -->
         <div class="hero-image">
             <img src="images/articels/london-articel/south.jpg" alt="Bustling South London market scene with colorful stalls, diverse crowds shopping and socializing, fresh produce and street food vendors, set against a backdrop of historic brick buildings on a lively sunny day">
         </div>
 
-        <!-- Description -->
         <div class="description">
             <p>South London doesn’t whisper, it sings. Its markets are living, breathing symphonies of color, culture, and chaos. Whether you're chasing street food that melts in your mouth, vintage threads with a story, or the perfect plant for your window sill, South London's markets are where soul meets street.
                     <br>Here are five markets you'll fall in love with, and maybe never want to leave.</p>
         </div>
 
-        <!-- Places section -->
         <section class="places-section">
 
             <h2>Best Markets in South London</h2>
-            <!-- Brixton Village & Market Row -->
 
             <div class="place-item">
                 <div class="place-image">
@@ -124,35 +118,35 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="city-save.js"></script>
 <script>
-    // Initialize London map
+    // London map
     const londonMap = L.map('london-map').setView([51.5074, -0.1278], 12);
     
-    // Add tile layer
+    // tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(londonMap);
     
-    // Add marker for Brixton Village & Market Row
+    //  marker for Brixton Village & Market Row
     L.marker([51.4627, -0.1145])
         .addTo(londonMap)
         .bindPopup('<b>Brixton Village & Market Row</b><br>Vibrant covered markets with diverse food and shops');
     
-    // Add marker for Peckham Levels & Rye Lane Market
+    //  marker for Peckham Levels & Rye Lane Market
     L.marker([51.4739, -0.0693])
         .addTo(londonMap)
         .bindPopup('<b>Peckham Levels & Rye Lane Market</b><br>Multi-story creative space and bustling street market');
     
-    // Add marker for Herne Hill Market
+    //  marker for Herne Hill Market
     L.marker([51.4527, -0.1030])
         .addTo(londonMap)
         .bindPopup('<b>Herne Hill Market</b><br>Sunday farmers market with local produce and crafts');
     
-    // Add marker for Tooting Market
+    // marker for Tooting Market
     L.marker([51.4275, -0.1687])
         .addTo(londonMap)
         .bindPopup('<b>Tooting Market</b><br>Indoor market famous for authentic South Asian cuisine');
     
-    // Add marker for Greenwich Market
+    // marker for Greenwich Market
     L.marker([51.4816, -0.0092])
         .addTo(londonMap)
         .bindPopup('<b>Greenwich Market</b><br>Historic covered market near the Royal Observatory');

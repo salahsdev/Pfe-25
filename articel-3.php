@@ -38,32 +38,26 @@
 
             <div class="container">
 
-        <!-- Back button -->
            <div class="travel-page-wrapper">
         <header class="travel-page-header">
             <a href="index.php" class="travel-back-button">< BACK</a>
         </header>
 
-        <!-- Header -->
         <header>
             <h1>Check In to Culture: Tokyo’s Top 5 Unique Hotels</h1>
         </header>
 
-        <!-- Hero image -->
         <div class="hero-image">
             <img src="images/articels/tokyo-articel/hotels.jpg" alt="Modern hotel building">
         </div>
 
-        <!-- Description -->
         <div class="description">
             <p>Tokyo, a city where the future hums through neon veins and tradition sits quietly in wooden corners. If you're seeking hotels that offer not just a place to sleep but a cultural experience, here are five of the best and most culturally rich hotels in Tokyo, where design, heritage, and atmosphere weave together like silk threads in a kimono..</p>
         </div>
 
-        <!-- Places section -->
         <section class="places-section">
 
             <h2>Best Hotels in Tokyo </h2>
-            <!-- Brixton Village & Market Row -->
 
             <div class="place-item">
                 <div class="place-image">
@@ -141,35 +135,35 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    // Initialize Tokyo map
+    // Tokyo map
     const tokyoMap = L.map('tokyo-map').setView([35.6762, 139.6503], 12);
     
-    // Add tile layer
+    // tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(tokyoMap);
     
-    // Add marker for Hoshinoya Tokyo
+    // marker for Hoshinoya Tokyo
     L.marker([35.6895, 139.7670])
         .addTo(tokyoMap)
         .bindPopup('<b>Hoshinoya Tokyo</b><br>Luxury ryokan-style hotel in Otemachi district');
     
-    // Add marker for Shibuya Granbell Hotel
+    // marker for Shibuya Granbell Hotel
     L.marker([35.6581, 139.7014])
         .addTo(tokyoMap)
         .bindPopup('<b>Shibuya Granbell Hotel</b><br>Boutique hotel in the heart of Shibuya');
     
-    // Add marker for Andon Ryokan
+    // marker for Andon Ryokan
     L.marker([35.7219, 139.7966])
         .addTo(tokyoMap)
         .bindPopup('<b>Andon Ryokan</b><br>Traditional Japanese inn in Minowa, Taito');
     
-    // Add marker for Park Hotel Tokyo
+    // marker for Park Hotel Tokyo
     L.marker([35.6654, 139.7707])
         .addTo(tokyoMap)
         .bindPopup('<b>Park Hotel Tokyo</b><br>Modern hotel in Shimbashi with Tokyo Bay views');
     
-    // Add marker for Hotel Ryumeikan Tokyo
+    // marker for Hotel Ryumeikan Tokyo
     L.marker([35.6809, 139.7677])
         .addTo(tokyoMap)
         .bindPopup('<b>Hotel Ryumeikan Tokyo</b><br>Traditional Japanese hospitality near Tokyo Station');

@@ -3,17 +3,14 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include 'config.php';
 
-// Start session only if not already started
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Handle login POST request
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST['email']);
     $password = $_POST['password'];
 
-    // Server-side validation
     if (!empty($email) && !empty($password)) {
         $stmt = $conn->prepare("SELECT id, password FROM useer WHERE email = ?");
         $stmt->bind_param("s", $email);
@@ -24,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_result($id, $hashed_password);
             $stmt->fetch();
             if (password_verify($password, $hashed_password)) {
-                // Successful login, redirect to index.php
                 session_start();
                 $_SESSION['user_id'] = $id;
                 header("Location: index.php");
@@ -52,7 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="loginstyle.css">
 </head>
 <body>
-    <!-- Sign In Form -->
     <div class="container" id="signin-container">
         <div class="form-container">
             <h2>Sign In</h2>

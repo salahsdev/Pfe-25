@@ -193,12 +193,12 @@ session_start();
         // Initialize Tokyo map
         const tokyoMap = L.map('tokyo-map').setView([35.6762, 139.6503], 13);
         
-        // Add tile layer
+        //  tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
         }).addTo(tokyoMap);
         
-        // Add marker for Tokyo
+        //  marker for Tokyo
         L.marker([35.6762, 139.6503])
             .addTo(tokyoMap)
             .bindPopup('<b>Tokyo, Japan</b><br>The Capital of Japan')

@@ -38,32 +38,27 @@
 
 
         <div class="container">
-        <!-- Back button -->
+
            <div class="travel-page-wrapper">
         <header class="travel-page-header">
             <a href="index.php" class="travel-back-button">< BACK</a>
         </header>
 
-        <!-- Header -->
         <header>
             <h1>The Ultimate Rome Travel Guide: Must-See Places and Hidden Gems</h1>
         </header>
 
-        <!-- Hero image -->
         <div class="hero-image">
             <img src="images/articels/rome-articel/romeeee.jpg" alt="Roman Forum with ancient ruins and columns">
         </div>
 
-        <!-- Description -->
         <div class="description">
             <p>Top 10 best things to do in Rome Italy, sightseeing and all must-see sites, tourist attractions, famous museums, Roman monuments, travel guide and historic landmarks. What to do highlights and best attractions to see in Rome?</p>
         </div>
 
-        <!-- Places section -->
         <section class="places-section">
             <h2>Places You Should Visit</h2>
 
-            <!-- Colosseum -->
             <div class="place-item">
                 <div class="place-image">
                     <img src="images/articels/rome-articel/colisee_rome.jpg" alt="Colosseum exterior view">
@@ -74,7 +69,6 @@
                 </div>
             </div>
 
-            <!-- Trevi Fountain -->
             <div class="place-item">
                 <div class="place-image">
                     <img src="images/articels/rome-articel/fontana_di_trevi_rome.jpg" alt="Trevi Fountain with baroque architecture">
@@ -85,7 +79,6 @@
                 </div>
             </div>
 
-            <!-- Pantheon -->
             <div class="place-item">
                 <div class="place-image">
                     <img src="images/articels/rome-articel/pantheon_rome.jpg" alt="Trevi Fountain with baroque architecture">
@@ -95,7 +88,7 @@
                     <p>One of the best maintained buildings from Roman times is the Pantheon. What function the building had in those days is still not clear, but the Pantheon was given to the pope by emperor Hadrian in 608. The current church has several unique funerary monuments (painter Raphael and a few Italian kings), as well as a remarkably large and open dome (oculus). Since a while you need to buy tickets to visit the Roman Pantheon.</p>
                 </div>
             </div>
-            <!-- St. Peter’s Basilica -->
+
             <div class="place-item">
                 <div class="place-image">
                     <img src="images/articels/rome-articel/basilique-saint-pierre-rome.jpg" alt="Trevi Fountain with baroque architecture">
@@ -105,7 +98,7 @@
                     <p>Start with the heart of it all: St. Peter’s Basilica—a towering symbol of the Catholic Church and resting place of Saint Peter himself. This vast and sacred space houses wonders like Michelangelo’s Pietà and Bernini’s magnificent baldachin. Beneath, you’ll find the crypts with over 140 papal tombs. It’s one of the most awe-inspiring sites in the world—just be sure to book in advance, or prepare for a long wait.</p>
                 </div>
             </div>
-            <!-- Trevi Fountain -->
+
             <div class="place-item">
                 <div class="place-image">
                     <img src="images/articels/rome-articel/chapelle_sixtine.jpg" alt="Trevi Fountain with baroque architecture">
@@ -123,35 +116,36 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    // Initialize Rome map
+
+    //  Rome map
     const romeMap = L.map('rome-map').setView([41.9028, 12.4964], 13);
     
-    // Add tile layer
+    // tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(romeMap);
     
-    // Add marker for Colosseum
+    // marker for Colosseum
     L.marker([41.8902, 12.4922])
         .addTo(romeMap)
         .bindPopup('<b>Colosseum</b><br>Ancient amphitheatre and one of the seven modern wonders');
     
-    // Add marker for Trevi Fountain
+    // marker for Trevi Fountain
     L.marker([41.9009, 12.4833])
         .addTo(romeMap)
         .bindPopup('<b>Trevi Fountain</b><br>Famous baroque fountain with Neptune statue');
     
-    // Add marker for Pantheon
+    //  marker for Pantheon
     L.marker([41.8986, 12.4769])
         .addTo(romeMap)
         .bindPopup('<b>Pantheon</b><br>Best preserved Roman building with remarkable dome');
     
-    // Add marker for St. Peter's Basilica
+    // marker for St. Peter's Basilica
     L.marker([41.9022, 12.4539])
         .addTo(romeMap)
         .bindPopup('<b>St. Peter\'s Basilica</b><br>Heart of Vatican City and Catholic Church');
     
-    // Add marker for Basilica di San Clemente al Laterano
+    //  marker for Basilica di San Clemente al Laterano
     L.marker([41.8874, 12.4972])
         .addTo(romeMap)
         .bindPopup('<b>Basilica di San Clemente al Laterano</b><br>Multi-layered church with ancient excavations');

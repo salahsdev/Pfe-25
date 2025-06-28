@@ -2,7 +2,7 @@
 session_start();
 include 'config.php';
 
-// Check if user is logged in
+// check if user is logged inn
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-// Get user's saved cities
+// get user saved cities
 $stmt = $conn->prepare("SELECT city_name, city_page, saved_at FROM saved_cities WHERE user_id = ? ORDER BY saved_at DESC");
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
@@ -18,7 +18,7 @@ $result = $stmt->get_result();
 $saved_cities = $result->fetch_all(MYSQLI_ASSOC);
 $stmt->close();
 
-// Get user info
+// get user info
 $user_stmt = $conn->prepare("SELECT first_name, last_name FROM useer WHERE id = ?");
 $user_stmt->bind_param("i", $user_id);
 $user_stmt->execute();

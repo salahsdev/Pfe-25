@@ -197,12 +197,12 @@ session_start();
         // Initialize London map
         const londonMap = L.map('london-map').setView([51.5074, -0.1278], 13);
         
-        // Add tile layer
+        //  tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
         }).addTo(londonMap);
         
-        // Add marker for London
+        //  marker for London
         L.marker([51.5074, -0.1278])
             .addTo(londonMap)
             .bindPopup('<b>London, UK</b><br>The Capital of England')
