@@ -203,7 +203,7 @@ session_start();
                     </div>
                     <div class="about-text">
                         <h2>Nice To Meet You</h2>
-                        <p>I am Salah, a traveler sharing my journey with the world. Through every city, story, and soul I meet, I find meaning worth sharing.</p>
+                        <p>I am <b>Salah eddine</b>, a traveler sharing my journey with the world. Through every city, story, and soul I meet, I find meaning worth sharing.</p>
                         <p>This site is my journal full of tips, tales, and raw wanderlust. I hope it inspires you to step out, explore, and feel more alive. Let's chase horizons together one path, one dream at a time.</p>
                     </div>
                 </div>

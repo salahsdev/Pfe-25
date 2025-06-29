@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family:  'Arial', sans-serif;
     background-color: #f8f9fa;
 }
 
@@ -42,18 +42,7 @@ body {
     width: auto;
 }
 
-.logo-placeholder {
-    width: 100px; 
-    height: 100px;
-    background-color: #e9ecef;
-    border: 2px dashed #adb5bd;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px; 
-    color: #6c757d;
-}
+
 
 .nav-menu {
     display: flex;
@@ -78,8 +67,6 @@ body {
 .nav-link:hover {
     color: #17a2b8;
 }
-
-
 
 .container {
     max-width: 800px;
@@ -176,15 +163,12 @@ header h1 {
     line-height: 1.3;
 }
 
-
-
 .place-content p {
     font-size: 14px;
     color: #000000;
     line-height: 1.6;
     margin-bottom: 15px;
 }
-
 
 @media (max-width: 640px) {
     .container {
