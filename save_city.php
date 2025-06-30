@@ -17,7 +17,7 @@ $user_id = $_SESSION['user_id'];
 $action = $_POST['action'] ?? '';
 
 if ($action === 'save') {
-    $city_name = trim($_POST['city_name'] ?? '');
+    $city_name = trim($_POST['city_name'] ?? ''); 
     $city_page = trim($_POST['city_page'] ?? '');
     
     if (empty($city_name) || empty($city_page)) {
