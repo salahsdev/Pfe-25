@@ -48,7 +48,7 @@
         </header>
 
         <div class="hero-image">
-            <img src="images/articels/london-articel/south.jpg" alt="Bustling South London market scene with colorful stalls, diverse crowds shopping and socializing, fresh produce and street food vendors, set against a backdrop of historic brick buildings on a lively sunny day">
+            <img src="images/articels/london-articel/south.jpg" alt="Bustling South London">
         </div>
 
         <div class="description">
@@ -118,6 +118,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="city-save.js"></script>
 <script>
+    
     // London map
     const londonMap = L.map('london-map').setView([51.5074, -0.1278], 12);
     
